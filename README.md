@@ -1,6 +1,6 @@
-# React with Flux Starter Kit
+# React Development Environment
 
-##This starter kit gives you the following:
+##This Set-up contains the following:
 - React, React Router, and Flux for ultra-responsive UI development  
 - Browserify bundling  
 - jQuery with Bootstrap for styling  
