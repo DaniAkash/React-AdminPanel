@@ -1,5 +1,5 @@
 {
-  "name": "psadmin",
+  "name": "admin-panel",
   "version": "1.0.0",
   "dependencies": {
     "bootstrap": {
@@ -4327,6 +4327,11 @@
           "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz"
         }
       }
+    },
+    "toastr": {
+      "version": "2.1.0",
+      "from": "toastr@2.1.0",
+      "resolved": "https://registry.npmjs.org/toastr/-/toastr-2.1.0.tgz"
     },
     "vinyl-source-stream": {
       "version": "1.1.0",
