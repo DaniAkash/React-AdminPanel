@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dani Akash",
@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "^3.3.5",
     "browserify": "^11.0.1",
+    "express": "^4.14.0",
     "flux": "^2.0.3",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
