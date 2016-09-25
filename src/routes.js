@@ -12,11 +12,12 @@ var routes = (
   <Route name="app" path="/" handler={require('./components/app')}>
     <DefaultRoute handler={require('./components/homePage')} />
     <Route name="authors" handler={require('./components/authors/authorPage')} />
-    <Route name="addAuthor" handler={require('./components/authors/ManageAuthorPage')} />
+    <Route name="manageAuthors" path="authors/:id" handler={require('./components/authors/manageAuthorPage')}/>
+    <Route name="addAuthor" handler={require('./components/authors/manageAuthorPage')} />
     <Route name="about" handler={require('./components/about/aboutPage')} />
     <NotFoundRoute handler={require('./components/notFoundPage')} />
     <Redirect from="about-us" to="about" />
-    <Redirect from="awthurs" to="authors" />
+    <Redirect from="author" to="authors" />
     <Redirect from="about/*" to="about" />
   </Route>
 );

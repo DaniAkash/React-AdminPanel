@@ -1,23 +1,22 @@
 "use strict";
 
 var React = require('react');
+var toastr = require('toastr');
 
 var About = React.createClass({
+
 	statics: {
 		willTransitionTo: function(transition, params, query, callback) {
-			if (!confirm('Are you sure you want to read a page that\'s this boring?')) {
-				transition.about();
-			} else {
-				callback();
-			}
+            toastr.info('This page contains some info about this web app');
+            // transition.about();
+            callback();
 		},
-		
+
 		willTransitionFrom: function(transition, component) {
-			if (!confirm('Are you sure you want to leave a page that\'s this exciting?')) {
-				transition.about();
-			}
+            toastr.info('You just left the about page...');
 		}
 	},
+
 	render: function () {
 		return (
 			<div>
@@ -27,7 +26,7 @@ var About = React.createClass({
 					<ul>
 						<li>React</li>
 						<li>React Router</li>
-						<li>Flux</li>
+						<li>Flux - <i>Yet to be used...</i></li>
 						<li>Node</li>
 						<li>Gulp</li>
 						<li>Browserify</li>
@@ -35,7 +34,7 @@ var About = React.createClass({
 					</ul>
 				</p>
 			</div>
-		); 
+		);
 	}
 });
 

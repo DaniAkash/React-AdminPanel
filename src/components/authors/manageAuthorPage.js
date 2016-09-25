@@ -29,6 +29,13 @@ var ManageAuthorPage = React.createClass({
         };
     },
 
+    componentWillMount: function() {
+        var authorId = this.props.params.id;
+        if(authorId) {
+            this.setState({author: AuthorApi.getAuthorById(authorId)});
+        }
+    },
+
     authorFormIsValid: function() {
         var formIsValid = true;
         this.state.errors = {}; // Clear pervious errors
