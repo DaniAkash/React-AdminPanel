@@ -4,8 +4,6 @@
   "dependencies": {
     "bootstrap": {
       "version": "3.3.5",
-      "from": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.5.tgz",
-      "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.5.tgz"
     },
     "browserify": {
       "version": "11.0.1",
