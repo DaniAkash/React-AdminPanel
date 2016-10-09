@@ -4,8 +4,9 @@ var React = require('react');
 var Router = require('react-router');
 var toastr = require('toastr');
 var _ = require('lodash');
+var AuthorActions = require('../../actions/authorActions');
+var AuthorStore = require('../../stores/authorStore');
 var AuthorForm = require('./authorForm');
-var AuthorApi = require('../../api/authorApi');
 
 var ManageAuthorPage = React.createClass({
 
@@ -32,7 +33,7 @@ var ManageAuthorPage = React.createClass({
     componentWillMount: function() {
         var authorId = this.props.params.id;
         if(authorId) {
-            this.setState({author: AuthorApi.getAuthorById(authorId)});
+            this.setState({author: AuthorStore.getAuthorById(authorId)});
         }
     },
 
@@ -44,8 +45,7 @@ var ManageAuthorPage = React.createClass({
         if(this.state.author.firstName.length < 1) { this.state.errors.firstName = "First Name can't be empty!"; }
         if(this.state.author.lastName.length < 1) { this.state.errors.lastName = "Last Name can't be empty!"; }
         this.setState({errors: this.state.errors});
-        if(!_.isEmpty(this.state.errors)) { return false; }
-        return true;
+        return _.isEmpty(this.state.errors);
     },
 
     setAuthorState: function(event) {
@@ -62,7 +62,7 @@ var ManageAuthorPage = React.createClass({
             toastr.error('The form contains errors!');
             return;
         }
-        AuthorApi.saveAuthor(this.state.author);
+        AuthorActions.createAuthor(this.state.author);
         this.setState({dirty: false});
         toastr.success('Author Saved!');
         this.transitionTo('authors');
