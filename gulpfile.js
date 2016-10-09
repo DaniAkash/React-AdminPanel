@@ -19,8 +19,12 @@ var config = {
 		css: [
       		'node_modules/bootstrap/dist/css/bootstrap.min.css',
       		'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
+			'node_modules/font-awesome/css/font-awesome.min.css',
             'node_modules/toastr/toastr.css'
     	],
+		fonts: [
+			'node_modules/font-awesome/fonts/*'
+		],
 		dist: './dist',
 		mainJs: './src/main.js'
 	}
@@ -63,6 +67,11 @@ gulp.task('css', function() {
 		.pipe(gulp.dest(config.paths.dist + '/css'));
 });
 
+gulp.task('fonts', function () {
+	gulp.src(config.paths.fonts)
+		.pipe(gulp.dest(config.paths.dist + '/fonts'));
+});
+
 gulp.task('images', function () {
 	gulp.src(config.paths.images)
 		.pipe(gulp.dest(config.paths.dist + '/images'))
@@ -83,4 +92,4 @@ gulp.task('watch', function() {
 	gulp.watch(config.paths.js, ['js', 'lint']);
 });
 
-gulp.task('default', ['html', 'js', 'css', 'images', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'css', 'images', 'fonts', 'lint', 'open', 'watch']);

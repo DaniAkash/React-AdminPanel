@@ -966,6 +966,11 @@
       "from": "https://registry.npmjs.org/flux/-/flux-2.0.3.tgz",
       "resolved": "https://registry.npmjs.org/flux/-/flux-2.0.3.tgz"
     },
+    "font-awesome": {
+      "version": "4.6.3",
+      "from": "font-awesome@latest",
+      "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.3.tgz"
+    },
     "gulp": {
       "version": "3.9.0",
       "from": "https://registry.npmjs.org/gulp/-/gulp-3.9.0.tgz",

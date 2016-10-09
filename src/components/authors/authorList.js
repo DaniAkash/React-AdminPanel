@@ -13,14 +13,14 @@ var AuthorList = React.createClass({
 	deleteAuthor: function (id, event) {
 		event.preventDefault();
 		AuthorActions.deleteAuthor(id);
-		toastr.success('Author Deleted!');
+		toastr.info('Author Deleted!');
 	},
 
 	render: function() {
 		var createAuthorRow = function(author) {
 			return (
 				<tr key={author.id}>
-					<td><a href="#" onClick={this.deleteAuthor.bind(this, author.id)}>Delete</a></td>
+					<td><a href="#"><i className="fa fa-trash" onClick={this.deleteAuthor.bind(this, author.id)}></i></a></td>
 					<td><Link to="manageAuthors" params={{id: author.id}}>{author.id}</Link></td>
 					<td>{author.firstName} {author.lastName}</td>
 				</tr>
@@ -31,7 +31,7 @@ var AuthorList = React.createClass({
 			<div>
 				<table className="table">
 					<thead>
-						<th></th>
+						<th>Actions</th>
 						<th>ID</th>
 						<th>Name</th>
 					</thead>

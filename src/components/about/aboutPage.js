@@ -26,7 +26,7 @@ var About = React.createClass({
 					<ul>
 						<li>React</li>
 						<li>React Router</li>
-						<li>Flux - <i>Yet to be used...</i></li>
+						<li>Flux</li>
 						<li>Node</li>
 						<li>Gulp</li>
 						<li>Browserify</li>
