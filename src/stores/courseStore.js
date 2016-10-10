@@ -47,8 +47,9 @@ Dispatcher.register(function (action) {
            CourseStore.emitChange();
            break;
        case ActionTypes.DELETE_COURSE:
+           console.log(action.id);
            _.remove(_courses, function (course) {
-               return course.id === course.id;
+               return action.id === course.id;
            });
            CourseStore.emitChange();
            break;
