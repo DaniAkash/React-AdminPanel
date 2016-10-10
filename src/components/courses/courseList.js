@@ -46,7 +46,7 @@ var CourseList = React.createClass({
                     </tbody>
                 </table>
             </div>
-        )
+        );
     }
 });
 

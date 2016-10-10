@@ -26,8 +26,10 @@ var CoursePage = React.createClass({
    },
 
    componentDidMount: function () {
-       if(this.isMounted())
+       if(this.isMounted()) {
            this.setState({courses: CourseStore.getAllCourses()});
+       }
+
    },
 
    render: function () {
