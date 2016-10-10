@@ -20,8 +20,8 @@ var CourseList = React.createClass({
         var createCourseRow = function (course) {
             return (
               <tr key={course.id}>
-                <td><a href="#"><i className="fa fa-trash" onClick={this.deleteCourse.bind(this, course.id)}></i></a></td>
-                <td>{course.id}</td>
+                <td><a href="#"><i className="fa fa-trash" onClick={this.deleteCourse.bind(this, course.id)}/></a></td>
+                <td><Link to="manageCourses" params={{id: course.id}}>{course.id}</Link></td>
                 <td><a href={course.watchHref} target="_blank">{course.title}</a></td>
                 <td>{course.author.name}</td>
                 <td>{course.length}</td>

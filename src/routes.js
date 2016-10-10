@@ -12,10 +12,11 @@ var routes = (
   <Route name="app" path="/" handler={require('./components/app')}>
     <DefaultRoute handler={require('./components/homePage')} />
     <Route name="authors" handler={require('./components/authors/authorPage')} />
-    <Route name="manageAuthors" path="authors/:id" handler={require('./components/authors/manageAuthorPage')}/>
+    <Route name="manageAuthors" path="authors/:id" handler={require('./components/authors/manageAuthorPage')} />
     <Route name="addAuthor" handler={require('./components/authors/manageAuthorPage')} />
-    <Route name="courses" handler={require('./components/courses/coursePage')}/>
-    <Route name="addCourse" handler={require('./components/notFoundPage')}/>
+    <Route name="courses" handler={require('./components/courses/coursePage')} />
+    <Route name="manageCourses" path="courses/:id" handler={require('./components/courses/manageCoursePage')} />
+    <Route name="addCourse" handler={require('./components/courses/manageCoursePage')} />
     <Route name="about" handler={require('./components/about/aboutPage')} />
     <NotFoundRoute handler={require('./components/notFoundPage')} />
     <Redirect from="about-us" to="about" />

@@ -5,6 +5,7 @@ var Router = require('react-router');
 var Link = Router.Link;
 var CourseStore = require('../../stores/courseStore');
 var CourseList = require('./courseList');
+var CourseForm = require('./courseForm');
 
 var CoursePage = React.createClass({
    getInitialState: function () {
